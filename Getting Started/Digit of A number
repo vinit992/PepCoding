@@ -1,0 +1,129 @@
+/*
+
+1. You've to display the digits of a number.
+2. Take as input "n", the number for which digits have to be displayed.
+3. Print the digits of the number line-wise.
+
+Constraints
+1 <= n < 10^9
+
+Format
+Input
+"n" where n is any integer.
+
+Output
+d1
+d2
+d3
+... digits of the number
+
+Example
+Sample Input
+
+65784383
+
+Sample Output
+6
+5
+7
+8
+4
+3
+8
+3
+
+*/
+
+
+//This code is not work for the test case in which the numbers last digit is zero like 100 or 5680 or 7043650
+
+/*import java.util.*;
+    
+    public class Main{
+    
+    public static void main(String[] args) {
+      // write your code here
+      Scanner sc = new Scanner(System.in);
+      int n = sc.nextInt();
+      int rem;
+      int sum = 0;
+      int rem1;
+     
+     while(n!=0)
+      {
+        rem = n%10;
+        sum = sum*10 + rem;
+        n = n/10;
+      }
+      while(sum!=0)
+      {
+        rem1 = sum%10;
+        System.out.println(rem1);
+        sum = sum/10;
+      }
+     }
+}
+*/
+
+// This code work against all the possible test cases like 100,10000 or 587556430
+
+/*import java.util.*;
+    
+    public class Main{
+    
+    public static void main(String[] args) {
+      // write your code here
+      Scanner sc = new Scanner(System.in);
+      long n = sc.nextInt();
+      long n1 = n;
+      long mul=1;
+      long count = 0;
+      while(n!=0){
+        dcount;
+        mul*=10;
+        n/=10;
+      }
+      mul/=10;
+      while(count>0){
+        System.out.println(n1/mul);
+        n1%=mul;
+        mul/=10;
+        count--;
+      }
+     }
+}
+*/
+
+// No need to declare the variable as long because we need to check the loop till divisior is not equal to zero.
+// We don't need to 
+
+import java.util.*;
+    
+    public class Main{
+    
+    public static void main(String[] args) {
+      // write your code here
+      Scanner sc = new Scanner(System.in);
+      int n = sc.nextInt();
+      int n1 = n;
+      int mul=1;
+      int count = 0;
+      while(n!=0){
+        count++;
+        //mul*=10;
+        n/=10;
+      }
+     // mul/=10;
+     int div = (int)Math.pow(10,count - 1);
+
+      while(div!=0){
+        System.out.println(n1/div);
+        n1%=div;
+        div/=10;
+        //d--;
+      }
+     }
+    }
+
+    
+    
