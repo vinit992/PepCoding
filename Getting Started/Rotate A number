@@ -28,4 +28,93 @@ Sample Output
 845629
 */
 
+//Read the notes carefully in the above Question.
+
+// In this there are 3 cases possible first one is rotate K times, second is rotate -K times, and Third is rotate if K is greater than the number.
+
+import java.util.*;
+   
+   public class Main{
+   
+   public static void main(String[] args) {
+     // write your code here
+      Scanner sc = new Scanner(System.in);
+      int n = sc.nextInt();
+      int k = sc.nextInt();
+      int t = n;
+      int count = 0;
+      while(t!=0)
+      {
+          t = t/10;
+          count++;
+      }
+
+
+    // if k is greater than count ex - count = 5, k = 352 then it means k = 352%5 => k = 2 so we need to rotate the number 2 times.
+
+      k = k % count;   
+      // if K is negative then we find add k into count ex - if k = -1 and n = 12345 then k = -1+5 => k = 4 means we need to rotate our number into 4 times 
+      if(k < 0) 
+      {
+        k = k + count;
+      }
+
+      // Break the number into two parts 
+      /*
+        eg: n = 12345
+        k = 2
+        it means we need to rotate this number into two times so 
+        actual number after k rotations 45123
+        so how is it happing 
+        123/45
+        here we need divisiors as 100 and quoitient as 1000
+        means 45 is the divisors and 123 is the quoitient 
+
+      */
+      int div = 1; 
+      int mul = 1;
+      for(int i = 1;i <= count; i++)
+      {
+        
+        if(i <= k)
+        {
+          div = div * 10;
+        }
+        else
+        {
+          mul = mul * 10;
+        }
+
+        
+      }
+      /*
+
+      Now we have div = 100
+      and mul = 1000
+      qu = 12345/100 => qu = 123
+      rem = 12345%100 => rem = 45
+      now we need to add 
+      rotate = 45 * 1000 + 123 => 45123
+
+
+      */
+      int qu =  n / div;
+      int rem = n % div;
+      int rotate = rem * mul + qu;
+      System.out.println(rotate);
+
+
+      
+    }
+   }
+
+
+
+
+
+
+
+
+
+
 
