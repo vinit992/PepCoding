@@ -97,6 +97,22 @@ Sample Output
 // No need to declare the variable as long because we need to check the loop till divisior is not equal to zero.
 // We don't need to 
 
+/*
+  lets take an example 
+  suppose we have a number 754 we need to print this number from left to right means 
+  7
+  5
+  4
+  so if we divide this number by 100 then we get 7 in quotient and 54 in reaminder
+  and again we need to divide the 54 by 10 then we get 5 in quotient and 4 in reaminder 
+  so it means we need to print the quotient 
+  so the below approach based on the above 
+  we need a multiplier and count how many digits are present in that number
+  
+
+*/
+
+
 import java.util.*;
     
     public class Main{
@@ -114,10 +130,11 @@ import java.util.*;
         n/=10;
       }
      // mul/=10;
-     int div = (int)Math.pow(10,count - 1);
+     int div = (int)Math.pow(10,count - 1); // here we did multipier means 10^2,10^3,....
 
+        // we need run run the loop till div is not equal to zero because when div is not equal to zero we don't have the digits to print.
       while(div!=0){
-        System.out.println(n1/div);
+        System.out.println(n1/div); //number divide by multiplier
         n1%=div;
         div/=10;
         //d--;
