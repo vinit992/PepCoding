@@ -60,6 +60,18 @@ import java.util.*;
       {
         System.out.println(j);
         fib_no = i + j ;
+        
+        /*
+        
+        lets us take an example for that
+        if n = 5;
+         then first it print 0, that is outside the loop and 
+         inside it print j's value means 1
+         and then we have taken an extra variable named fib_no and add i + j this gives the next fib number to us
+         and we update the i value by j's value  and then update fib_no value by j because we need pervious number to add and getting the next number
+        
+        */
+        
         i = j;
         j = fib_no;
         
