@@ -79,10 +79,13 @@ Sample Output
       long mul=1;
       long count = 0;
       while(n!=0){
-        dcount;
+        ++count;
         mul*=10;
         n/=10;
       }
+      
+      //we get here if the number is 754 then we get the multiplier is 1000 but we need 100 so we deivide it by 10
+      
       mul/=10;
       while(count>0){
         System.out.println(n1/mul);
