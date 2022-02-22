@@ -44,7 +44,7 @@ import java.util.*;
 
       int a = n1;
       int b = n2;
-      
+      //Note - We need to take extra variable because if we don't take then when we find LCM then the value of a is taken after gcd.
       //GCD or HCF
       
       while(a!=b)
