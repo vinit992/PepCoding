@@ -1,0 +1,50 @@
+/*
+
+1. You are given a number n.
+2. You've to create a pattern of * and separated by tab as shown in output format.
+Input Format
+A number n
+Output Format
+Constraints
+1 <= n <= 100
+Sample Input
+5
+Sample Output
+*	
+	*	
+		*	
+			*	
+				*	
+
+
+
+*/
+
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // write ur code here
+        
+        int n = sc.nextInt();
+        
+        
+        for(int i = 1;i<=n;i++)
+        {
+            for(int j = 1;j<=n;j++)
+            {
+                if(i == j)    // i and j is equal on diagonal means 1,1 and 2,2 and 3,3 and 4,4 and 5,5 we need to print * else we print space
+                {
+                    System.out.print("*\t");
+                }
+                System.out.print("\t");
+            }
+            System.out.println();
+            
+           
+        }
+    }
+}
