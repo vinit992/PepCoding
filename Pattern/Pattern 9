@@ -1,0 +1,40 @@
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // write ur code here
+        int n = sc.nextInt();
+        for(int i = 1;i<=n;i++)
+        {
+            for(int j = 1;j<=n;j++)
+            {
+                /*
+                    if n =5;
+                    then we need to find  first 1,1 and 2,2  and 3,3 and 4,4 and 5,5
+                    after this we need to find 1,5 and 2,4 and 3,3 and 4,2 and 5,1
+                    so here the condition if i == j means first it find 1,1 print space and then i+j == n+1
+                    means 1+1 == 5+1 that not equal so only one condition is true then it print * and now 
+                    increase the value of j and now i!=j then it check second condition and here i=1,and j=2 so i+j == 5+1 are not equal 
+                    so here both the  condition is false then it will print space and at last only when j = 5 and i = 1 its true then it print *
+                    this continue ......
+                    
+                
+                */
+                
+                if(i == j || i+j == n+1) 
+                {
+                    System.out.print("*\t");
+                }
+                else
+                {
+                    System.out.print("\t");
+                }
+            }
+            System.out.println();
+        }
+
+    }
+}
