@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // write ur code here
+        int n = sc.nextInt();
+        int i = 0;
+        int j = 1;
+        int fib_no;
+        System.out.println(i);
+        //System.out.print(j);
+        
+        for(int k = 1;k<n;k++)
+        {
+            for(int l = 0;l<=k;l++)
+            {
+                System.out.print(j);
+                System.out.print("\t");
+                fib_no = i+j;
+                i = j;
+                j = fib_no;
+                
+            }
+            
+            System.out.println();
+        }
+        
+
+    }
+}
