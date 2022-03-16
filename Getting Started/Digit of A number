@@ -135,7 +135,8 @@ import java.util.*;
      // mul/=10;
      int div = (int)Math.pow(10,count - 1); // here we did multipier means 10^2,10^3,....
 
-        // we need run run the loop till div is not equal to zero because when div is not equal to zero we don't have the digits to print.
+        // if we take while(n!=0) then it woludn't works for 5670, 100,23100 means if zero in the last then it not consider it so we need 
+           to take divisors not equal to zero..
       while(div!=0){
         System.out.println(n1/div); //number divide by multiplier
         n1%=div;
