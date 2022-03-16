@@ -56,6 +56,9 @@ import java.util.*;
             int n = scn.nextInt();
             int count = 0;
             //boolean flag = false;
+            
+            //if a prime number is divide by a number then if it divide till its square root so we take the loop till sqrt of n. 
+            
             for(int j = 2;j*j<=n;j++)
             {
               if(n%j == 0)
