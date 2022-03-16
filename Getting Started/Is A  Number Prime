@@ -66,6 +66,9 @@ import java.util.*;
                 
                 //flag = true;
                 count++;
+                // we take the break statemetn because if the number is divide by any number then no need to check further suppose
+                // we have a number 12 and first it divide by 2 and  its divide and remainder will one so we don't need to check further this number because 
+                // prime number is divide by 1 and itself.
                 break;
 
               }
