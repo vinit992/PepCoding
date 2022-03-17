@@ -1,0 +1,69 @@
+/*
+1. You are given a number n.
+2. You've to write code to print the pattern given in output format below.
+Input Format
+A number n
+Sample Input
+5
+Sample Output
+		*	
+		*	*	
+*	*	*	*	*	
+		*	*	
+		*	
+    
+Constraints
+1 <= n <= 10
+Also, n is odd.
+
+
+*/
+
+
+
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // write ur code here
+        
+        int n = sc.nextInt();
+        int sp = n/2;
+        int st = 1;
+        for(int i = 1;i<=n;i++)
+        {
+            for(int j = 1;j<=sp;j++)
+            {
+                if(i == n/2+1)//its for mid row if i == n/2+1 means if n = 5 then we need to print in to mid row 2 star so we take mid + 1 here.
+                {
+                    System.out.print("*\t");
+                }
+                else
+                {
+                    System.out.print("\t");
+                }
+                
+            }
+            for(int j = 1;j<=st;j++)
+            {
+                System.out.print("*\t");
+            }
+            
+            
+            if(i <= n/2)
+            {
+                //System.out.print("*\t");
+                st++;
+            }
+            else{
+                st--;
+            }
+            System.out.println();
+            //System.out.print("*\t");
+        }
+
+    }
+}
