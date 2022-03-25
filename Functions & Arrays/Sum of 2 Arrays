@@ -1,0 +1,84 @@
+import java.io.*;
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) throws Exception {
+    // write your code here
+    Scanner sc = new Scanner(System.in);
+    int n1 = sc.nextInt();
+    int[] arr1 = new int[n1];
+    
+    
+    int[] arr3;
+    for(int i = 0;i<n1;i++)
+    {
+        arr1[i] = sc.nextInt();
+    }
+    int n2 = sc.nextInt();
+    int[] arr2 = new int[n2];
+    for(int i = 0;i<n2;i++)
+    {
+        arr2[i] = sc.nextInt();
+    }
+    if(n1 > n2)
+    {
+        arr3 = new int[n1];
+        System.out.println(arr3.length);
+       // for(int i = n1)
+    }
+    else
+    {
+        arr3 = new int[n2];
+        System.out.println(arr3.length);
+    }
+    //System.out.println(arr3.length);
+    
+    //or we can take this as using ternary operator
+    //int[] arr3 = new int[n1 > n2 ? n1 : n2];
+    
+    
+    int i = arr1.length - 1;
+    int j = arr2.length - 1;
+    int k = arr3.length - 1;
+    
+    int carry = 0;
+    
+    while(k>=0)
+    {
+        // here we take assign the carry value to digit because carry add to next number.
+        int digit = carry;
+        if(i>=0)
+        {
+            digit+=arr1[i];
+        }
+        if(j>=0)
+        {
+            digit+=arr2[j];
+        }
+        carry = digit / 10;
+        digit = digit % 10;
+        arr3[k] = digit;
+        i--;
+        j--;
+        k--;
+    }
+    
+    //here we print if at last if the carry value is one then we print it means 
+    // suppose we have two array arr1 = {8,2,1,2,9} and arr2 = {4,9,8,7,5} when we sum these array then we get out put like this  arr3 = {13,2,0,0,4}
+    // here in the question one change we need to print the arr3 = {1,3,2,0,0,4} is the actual output. 
+    if(carry!=0)
+    {
+        System.out.println(carry);
+    }
+    //System.out.println(arr3.length);
+    for(int x = 0;x<arr3.length;x++)
+    {
+        
+         
+        System.out.print(arr3[x]+"\t");
+        
+    }
+ }
+
+}
